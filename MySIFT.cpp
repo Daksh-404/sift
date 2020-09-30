@@ -10,26 +10,18 @@
 // MySIFT.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
+#include<iostream>
+#include<opencv2/opencv.hpp>
+#include "mySIFT.h"
+using namespace cv;
+using namespace std;
 
-#include "SIFT.h"
-
-#include <cv.h>
-#include <highgui.h>
-
-// The main function!
 int main()
 {
-	// Create an instance of SIFT
-	SIFT *sift = new SIFT("C:\\house.jpg", 4, 2);
-
-	sift->DoSift();				// Find keypoints
-	sift->ShowAbsSigma();		// Display the sigma table
-	sift->ShowKeypoints();		// Show the keypoints
-	cvWaitKey(0);				// Wait for a keypress
-
-	// Cleanup and exit
-	delete sift;
+	Mat img = imread("car.jpg");
+	meSIFT x(img,4,2);
+	x.DoSift();
+	x.ShowKeypoints();
 	return 0;
 }
 
