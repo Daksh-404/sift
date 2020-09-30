@@ -7,7 +7,7 @@
  * this code :)
  ******************************************************/
 
-#include "mySIFT.h"
+#include "SIFT.h"
 #include "stdafx.h"
 #include <climits>
 //This file containes all the method of 
